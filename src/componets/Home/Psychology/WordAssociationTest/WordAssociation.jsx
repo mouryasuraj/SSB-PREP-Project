@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Heading from "../Heading";
-import WordSet from "./WordSet";
+import { Outlet } from "react-router-dom";
+
+
 
 function WordAssociation() {
+
+
   const [showInfo, setShowInfo] = useState(false);
 
   const handleInstruction = () => {
@@ -10,28 +14,27 @@ function WordAssociation() {
   };
 
   return (
-    <div className="px-20 py-5 flex flex-col items-center justify-start bg-white">
+    <div className="px-20 py-5 flex flex-col relative items-center h-[100%] justify-start bg-white">
       <Heading
         headingName="word association test"
         iconName="circle-info"
         handleInstruction={handleInstruction}
       />
       <div className="flex flex-wrap justify-center mb-16 w-[70%] gap-x-4">
-        <WordSet />
+        <Outlet />
       </div>
       {/* MOdal For Instruction */}
       <div
-        className={`w-full flex items-center justify-center bg-black/70 fixed top-0 bottom-0 left-0 right-0 ${
-          showInfo ? "z-[100]" : "z-[-100]"
-        } `}
+        className={`w-full flex items-center justify-center bg-black/70 fixed top-0 bottom-0 left-0 right-0 ${showInfo ? "z-[10]" : "z-[-10]"
+          } `}
       >
         <div className="p-6 bg-white rounded-md  max-w-[90%] lg:max-w-[50%]">
           <i
             onClick={handleInstruction}
-            class="cursor-pointer px-2 py-1 w-fit float-right hover:rotate-180 duration-200 text-sky-800 hover:bg-sky-700 hover:text-white rounded-sm text-2xl  fa-solid fa-xmark"
+            className="cursor-pointer px-2 py-1 w-fit float-right hover:rotate-180 duration-200 text-sky-800 hover:bg-sky-700 hover:text-white rounded-sm text-2xl  fa-solid fa-xmark"
           ></i>
           <h1 className="capitalize text-3xl font-bold text-sky-900">Instructions</h1>
-            {/* Instruction list */}
+          {/* Instruction list */}
           <ul className="px-10 text-sky-900 font-bold mt-2" style={{ listStyleType: "disc" }}>
             <li>Each set contains 60 different words.</li>
             <li>Each word will displayed on screen for 15 seconds.</li>

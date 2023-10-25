@@ -6,7 +6,7 @@ function Heading({ headingName, iconName, handleInstruction}) {
       <h1 className="uppercase pb-1 text-sky-600 font-extrabold  md:text-2xl">
         {headingName}
       </h1>
-    <div><i onClick={handleInstruction} title="Instructions" className={`fa-solid fa-${iconName} text-sky-500 text-2xl hover:text-sky-900 cursor-pointer`}></i></div>
+    <div><i onClick={handleInstruction} title="Instructions" className={`fa-solid fa-${iconName} animate-bounce text-sky-500 absolute right-5 top-5 text-2xl hover:text-sky-900 cursor-pointer`}></i></div>
     </div>
   );
 }

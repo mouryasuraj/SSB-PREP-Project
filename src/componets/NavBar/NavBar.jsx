@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="bg-sky-500 flex justify-between px-10 md:justify-around items-center relative">
+      <nav className="bg-sky-500 flex justify-between px-10 md:justify-around  items-center relative">
         {/* Logo */}
         <Link to='' className="md:text-5xl text-3xl uppercase text-white font-extrabold  py-4 cursor-pointer">
           SSB Prep
@@ -25,7 +25,7 @@ function NavBar() {
           {/* X Mark */}
           <i
             onClick={handleMenu}
-            class="fa-solid px-3 py-1 rounded-full hover:rotate-180 duration-500 hover:bg-red-500 fa-xmark right-5 top-3 absolute md:hidden text-3xl  cursor-pointer text-white"
+            className="fa-solid px-3 py-1 rounded-full hover:rotate-180 duration-500 hover:bg-red-500 fa-xmark right-5 top-3 absolute md:hidden text-3xl  cursor-pointer text-white"
           ></i>
           <div className="flex md:flex-row flex-col gap-y-8">
             <NavBarLink linkName="home" />
@@ -36,7 +36,7 @@ function NavBar() {
         {/* Solid Bar */}
         <i
           onClick={handleMenu}
-          class="fa-solid fa-bars md:hidden text-3xl  cursor-pointer text-white"
+          className="fa-solid fa-bars md:hidden text-3xl  cursor-pointer text-white"
         ></i>
       </nav>
     </div>
