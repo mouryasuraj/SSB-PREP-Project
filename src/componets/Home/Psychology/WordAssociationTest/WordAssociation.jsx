@@ -25,7 +25,7 @@ function WordAssociation() {
       </div>
       {/* MOdal For Instruction */}
       <div
-        className={`w-full flex items-center justify-center bg-black/70 fixed top-0 bottom-0 left-0 right-0 ${showInfo ? "z-[10]" : "z-[-10]"
+        className={`w-full flex items-center justify-center bg-black/70  fixed top-0 bottom-0 left-0 right-0 ${showInfo ? "h-[100vh] z-[999]" : "z-[-999] translate-x-full"
           } `}
       >
         <div className="p-6 bg-white rounded-md  max-w-[90%] lg:max-w-[50%]">

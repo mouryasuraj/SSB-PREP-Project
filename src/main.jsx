@@ -9,15 +9,16 @@ import ContactUs from './componets/ContactUs'
 import WordAssociation from './componets/Home/Psychology/WordAssociationTest/WordAssociation'
 import ShowWords from './componets/Home/Psychology/WordAssociationTest/ShowWords'
 import WordSet from './componets/Home/Psychology/WordAssociationTest/WordSet'
-import { SetContextProvider } from './context/setsContext'
 import Instruction from './componets/Home/Psychology/WordAssociationTest/Instruction'
 import StartTest from './componets/Home/Psychology/WordAssociationTest/StartTest'
+import { Provider } from 'react-redux'
+import { store } from './App/store'
 
 const set = [];
 const len = 50;
 
-for (let i = 1; i <=len; i++) {
-  set.push(`set_${i}/`)
+for (let i = 1; i <= len; i++) {
+  set.push(`set_${i<10 ? `0${i}` : i}/`)
 }
 
 
@@ -34,10 +35,10 @@ const router = createBrowserRouter(
         <Route path='' element={<WordSet />} />
         {
           set.map((set) => (
-             <Route path={set} key={set} element={<ShowWords />} >
-              <Route path='' element={<Instruction />}  />
-              <Route path='start-test' element={<StartTest />}  />
-             </Route>
+            <Route path={set} key={set} element={<ShowWords />} >
+              <Route path='' element={<Instruction />} />
+              <Route path='start-test/:id' element={<StartTest />} />
+            </Route>
           ))
         }
       </Route>
@@ -49,6 +50,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
