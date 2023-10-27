@@ -18,7 +18,7 @@ function NavBar() {
         </Link>
         {/* navlink */}
         <ul
-          className={`flex-wrap gap-x-2 md:flex md:pt-0 pt-12 duration-300 md:relative px-10 w-1/2 md:top-0 absolute  md:w-fit md:h-fit  h-[100vh] ${
+          className={`flex-wrap gap-x-2 md:flex md:pt-0 pt-12 z-[1000] duration-300 md:relative px-10 w-1/2 md:top-0 absolute  md:w-fit md:h-fit  h-[100vh] ${
             hidden ? "top-[0]" : "top-[-100vh]"
           } bg-sky-500 md:bg-transparent right-[0]`}
         >

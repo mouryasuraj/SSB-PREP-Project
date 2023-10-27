@@ -15,7 +15,7 @@ import { Provider } from 'react-redux'
 import { store } from './App/store'
 
 const set = [];
-const len = 50;
+const len = 10;
 
 for (let i = 1; i <= len; i++) {
   set.push(`set_${i<10 ? `0${i}` : i}/`)

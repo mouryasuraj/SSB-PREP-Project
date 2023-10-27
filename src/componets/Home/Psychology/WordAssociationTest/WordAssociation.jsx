@@ -20,7 +20,7 @@ function WordAssociation() {
         iconName="circle-info"
         handleInstruction={handleInstruction}
       />
-      <div className="flex flex-wrap justify-center mb-16 w-[70%] gap-x-4">
+      <div className="flex flex-wrap justify-center  mb-16 w-[70%] gap-x-4">
         <Outlet />
       </div>
       {/* MOdal For Instruction */}
