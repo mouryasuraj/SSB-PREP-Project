@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className="bg-sky-500 flex justify-between px-10 md:justify-around  items-center relative">
+      <nav className="bg-sky-500 flex relative z-[1000] justify-between px-10 md:justify-around  items-center">
         {/* Logo */}
         <Link to='' className="md:text-5xl text-3xl uppercase text-white font-extrabold  py-4 cursor-pointer">
           SSB Prep
